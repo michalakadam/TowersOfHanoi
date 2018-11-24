@@ -9,7 +9,7 @@ public class IntInputValidator {
             return keyboard.getInt();
         }
         catch(InputMismatchException inputMismatchException) {
-            System.out.println("Zła wartość -> wpisz liczbę. ");
+            System.out.println("Wrong input. You have to provide a number. ");
             keyboard.getString();
             return checkInputFromPlayer(keyboard);
         }
@@ -25,7 +25,7 @@ public class IntInputValidator {
         if (inputIsInRange(input, min, max)) {
             return input;
         }
-        System.out.println(String.format("Liczba poza przedziałem [%s, %s]. Spróbuj jeszcze raz! ", min, max));
+        System.out.println(String.format("Provided number is out of range [%s, %s]. Try again! ", min, max));
         return getInput(keyboard, message, min, max);
     }
 }
