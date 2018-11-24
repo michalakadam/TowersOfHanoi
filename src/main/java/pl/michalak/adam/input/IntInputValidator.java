@@ -1,5 +1,7 @@
 package pl.michalak.adam.input;
 
+import pl.michalak.adam.output.Display;
+
 import java.util.InputMismatchException;
 
 class IntInputValidator {
@@ -9,7 +11,7 @@ class IntInputValidator {
             return keyboard.getInt();
         }
         catch(InputMismatchException inputMismatchException) {
-            System.out.println("Wrong input. You have to provide a number. ");
+            Display.displayWithNextLine("Wrong input. You have to provide a number. ");
             keyboard.getString();
             return checkInputFromPlayer(keyboard);
         }
@@ -21,12 +23,12 @@ class IntInputValidator {
     }
 
     static int getInput(InputReader keyboard, String message, int min, int max) {
-        System.out.println(message);
+        Display.displayWithNextLine(message);
         int input = checkInputFromPlayer(keyboard);
         if (inputIsInRange(input, min, max)) {
             return input;
         }
-        System.out.println(String.format("Provided number is out of range [%s, %s]. Try again! ", min, max));
+        Display.displayWithNextLine(String.format("Provided number is out of range [%s, %s]. Try again! ", min, max));
         return getInput(keyboard, message, min, max);
     }
 }

@@ -1,6 +1,7 @@
 package pl.michalak.adam.algorithm;
 
 import pl.michalak.adam.Board.BoardAPI;
+import pl.michalak.adam.output.Display;
 
 class Recursion {
     private final boolean shouldInfoBePrinted;
@@ -22,13 +23,13 @@ class Recursion {
 
     private void swapDisks(int numberOfDisks, char fromRod, char toRod, char tempRod) {
         if(stepCounter.getSteps() == 0 && this.shouldInfoBePrinted) {
-            System.out.println(boardAPI);
+            Display.displayWithNextLine(boardAPI.toString());
         }
         if(numberOfDisks == 1) {
             stepCounter.addOneStep();
             boardAPI.moveDiskFromOneRodToTheOther(fromRod, toRod);
             if(this.shouldInfoBePrinted) {
-                System.out.println(boardAPI);
+                Display.displayWithNextLine(boardAPI.toString());
             }
             return;
         }
@@ -36,7 +37,7 @@ class Recursion {
         stepCounter.addOneStep();
         boardAPI.moveDiskFromOneRodToTheOther(fromRod, toRod);
         if(this.shouldInfoBePrinted) {
-            System.out.println(boardAPI);
+            Display.displayWithNextLine(boardAPI.toString());
         }
         swapDisks(numberOfDisks-1, tempRod, toRod, fromRod);
     }

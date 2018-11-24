@@ -1,5 +1,7 @@
 package pl.michalak.adam.Board;
 
+import pl.michalak.adam.output.Display;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +34,7 @@ public class BoardAPI {
             toThisRod.addDisk(fromThisRod.removeTopMostDisk());
         }
         catch(NullPointerException rodIsNull){
-            System.out.println("Rod you are trying to reach is null!");
+            Display.displayWithNextLine("Rod you are trying to reach is null!");
         }
     }
 
@@ -43,6 +45,7 @@ public class BoardAPI {
             out += listOfRods.get(i).toString();
             out += "\n";
         }
+        out += "\n";
         return out;
     }
 }

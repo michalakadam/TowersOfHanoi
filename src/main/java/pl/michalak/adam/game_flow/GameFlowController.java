@@ -1,6 +1,7 @@
 package pl.michalak.adam.game_flow;
 
 import pl.michalak.adam.input.InputAPI;
+import pl.michalak.adam.output.Display;
 
 class GameFlowController {
     private final InputAPI input = new InputAPI();
@@ -14,6 +15,6 @@ class GameFlowController {
     }
 
     void summary(int numberOfSteps, double timeOfRecursion) {
-        System.out.println("\nDONE! Whole calculation took "+numberOfSteps+" steps in "+timeOfRecursion+" seconds.");
+        Display.displayWithoutNextLine("\nDONE! Whole calculation took "+numberOfSteps+" steps in "+timeOfRecursion+" seconds.");
     }
 }
