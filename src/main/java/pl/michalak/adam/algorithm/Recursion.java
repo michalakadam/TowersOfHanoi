@@ -9,7 +9,7 @@ class Recursion {
     private final static char toRod = 'B';
     private final static char tempRod = 'C';
     private final StepCounter stepCounter;
-    BoardAPI boardAPI;
+    private BoardAPI boardAPI;
 
     Recursion(boolean shouldInfoBePrinted){
         this.shouldInfoBePrinted = shouldInfoBePrinted;

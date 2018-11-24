@@ -5,7 +5,7 @@ import java.util.List;
 
 class Rod {
     private final char rodName;
-    private List<Disk> diskList;
+    private final List<Disk> diskList;
 
     Rod(char rodName, int numberOfDisks){
         this.rodName = rodName;
