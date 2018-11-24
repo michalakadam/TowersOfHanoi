@@ -8,8 +8,8 @@ import pl.michalak.adam.game_flow.GameFlowAPI;
  * @author Adam Michalak
  */
 class TowersOfHanoi {
-public static void main(String[] args) {
 
+public static void main(String[] args) {
     new GameFlowAPI().manageFlow();
     }
 }

@@ -2,9 +2,9 @@ package pl.michalak.adam.input;
 
 import java.util.InputMismatchException;
 
-public class IntInputValidator {
-    private static int checkInputFromPlayer(InputReader keyboard)
-    {
+class IntInputValidator {
+
+    private static int checkInputFromPlayer(InputReader keyboard) {
         try {
             return keyboard.getInt();
         }
@@ -14,12 +14,13 @@ public class IntInputValidator {
             return checkInputFromPlayer(keyboard);
         }
     }
+
     private static boolean inputIsInRange(int input, int min, int max)
     {
         return input >= min && input <= max;
     }
-    static int getInput(InputReader keyboard, String message, int min, int max)
-    {
+
+    static int getInput(InputReader keyboard, String message, int min, int max) {
         System.out.println(message);
         int input = checkInputFromPlayer(keyboard);
         if (inputIsInRange(input, min, max)) {

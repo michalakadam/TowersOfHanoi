@@ -7,16 +7,13 @@ import pl.michalak.adam.algorithm.AlgorithmAPI;
  * @author Adam_Michalak
  */
 public class GameFlowAPI {
+    private final GameFlowController gameFlowController = new GameFlowController();
 
-    GameFlowController gameFlowController = new GameFlowController();
-
-    public void manageFlow()
-    {
+    public void manageFlow() {
         int numberOfDisks = gameFlowController.getNumbersOfDisksFromUser();
         boolean shouldInfoBePrinted = gameFlowController.getDecisionAboutProgressPrinting();
         AlgorithmAPI algorithmAPI = new AlgorithmAPI(shouldInfoBePrinted);
         algorithmAPI.makeUseOfTheRecursion(numberOfDisks);
         gameFlowController.summary(algorithmAPI.getNumberOfSteps(), algorithmAPI.getTimeOfRecursion());
     }
-
 }

@@ -1,15 +1,13 @@
 package pl.michalak.adam.algorithm;
 
 class StepCounter{
-    static int steps = 0;
+    private static int steps = 0;
 
-    void addOneStep()
-    {
-        this.steps++;
+    void addOneStep() {
+        steps++;
     }
 
-    public int getSteps()
-    {
+    public int getSteps() {
         return steps;
     }
 }

@@ -6,17 +6,17 @@ package pl.michalak.adam.input;
  */
 
 public class InputAPI {
-    InputReader inputReader;
+    private final InputReader inputReader;
 
     public InputAPI() {
         this.inputReader = new InputReader(System.in);
     }
-    public String getAndValidateStringInput(String message, String option1, String option2)
-    {
+
+    public String getAndValidateStringInput(String message, String option1, String option2) {
         return StringInputValidator.getInput(inputReader, message, option1, option2);
     }
-    public int getAndValidateIntInput(String message, int min, int max)
-    {
+
+    public int getAndValidateIntInput(String message, int min, int max) {
         return IntInputValidator.getInput(inputReader, message, min, max);
     }
     

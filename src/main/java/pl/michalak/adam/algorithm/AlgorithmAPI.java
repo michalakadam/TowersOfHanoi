@@ -1,9 +1,9 @@
 package pl.michalak.adam.algorithm;
 
 public class AlgorithmAPI {
-    Recursion recursion;
-    StopWatch stopWatch;
-    StepCounter stepCounter;
+    private final Recursion recursion;
+    private final StopWatch stopWatch;
+    private final StepCounter stepCounter;
 
     public AlgorithmAPI(boolean shouldInfoBePrinted){
         this.recursion = new Recursion(shouldInfoBePrinted);
@@ -12,20 +12,17 @@ public class AlgorithmAPI {
     }
 
 
-    public void makeUseOfTheRecursion(int numberOfDisks)
-    {
+    public void makeUseOfTheRecursion(int numberOfDisks) {
         stopWatch.startMeasuringTime();
         recursion.useRecursion(numberOfDisks);
         stopWatch.stopMeasuringTime();
     }
 
-    public double getTimeOfRecursion()
-    {
+    public double getTimeOfRecursion() {
         return stopWatch.getWholeTime();
     }
 
-    public int getNumberOfSteps()
-    {
+    public int getNumberOfSteps() {
         return stepCounter.getSteps();
     }
 }
