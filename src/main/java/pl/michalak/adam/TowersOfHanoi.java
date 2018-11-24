@@ -1,4 +1,7 @@
 package pl.michalak.adam;
+
+import pl.michalak.adam.game_flow.GameFlowAPI;
+
 /**
  * Główna klasa programu
  *
@@ -7,5 +10,6 @@ package pl.michalak.adam;
 class TowersOfHanoi {
 public static void main(String[] args) {
 
+    new GameFlowAPI().manageFlow();
     }
 }
