@@ -5,9 +5,11 @@ class Recursion {
     final static char fromRod = 'A';
     final static char toRod = 'B';
     final static char tempRod = 'C';
+    StepCounter stepCounter;
 
     Recursion(boolean shouldInfoBePrinted){
         this.shouldInfoBePrinted = shouldInfoBePrinted;
+        this.stepCounter = new StepCounter();
     }
     void useRecursion(int numberOfDisks)
     {
@@ -17,12 +19,14 @@ class Recursion {
     {
         if(numberOfDisks == 1)
         {
+            stepCounter.addOneStep();
             if(this.shouldInfoBePrinted) {
                 System.out.printf("\nMove disk %d from rod %c to rod %c", numberOfDisks, fromRod, toRod);
             }
                 return;
         }
         swapDisks(numberOfDisks-1, fromRod, tempRod, toRod);
+        stepCounter.addOneStep();
         if(this.shouldInfoBePrinted) {
             System.out.printf("\nMove disk %d from rod %c to rod %c", numberOfDisks, fromRod, toRod);
         }

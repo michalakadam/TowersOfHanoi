@@ -16,7 +16,7 @@ public class GameFlowAPI {
         boolean shouldInfoBePrinted = gameFlowController.getDecisionAboutProgressPrinting();
         AlgorithmAPI algorithmAPI = new AlgorithmAPI(shouldInfoBePrinted);
         algorithmAPI.makeUseOfTheRecursion(numberOfDisks);
-        gameFlowController.summary(algorithmAPI.getTimeOfRecursion());
+        gameFlowController.summary(algorithmAPI.getNumberOfSteps(), algorithmAPI.getTimeOfRecursion());
     }
 
 }

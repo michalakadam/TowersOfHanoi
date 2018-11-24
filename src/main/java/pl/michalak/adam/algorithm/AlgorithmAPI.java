@@ -3,10 +3,12 @@ package pl.michalak.adam.algorithm;
 public class AlgorithmAPI {
     Recursion recursion;
     StopWatch stopWatch;
+    StepCounter stepCounter;
 
     public AlgorithmAPI(boolean shouldInfoBePrinted){
         this.recursion = new Recursion(shouldInfoBePrinted);
         this.stopWatch = new StopWatch();
+        this.stepCounter = new StepCounter();
     }
 
 
@@ -17,7 +19,13 @@ public class AlgorithmAPI {
         stopWatch.stopMeasuringTime();
     }
 
-    public double getTimeOfRecursion(){
+    public double getTimeOfRecursion()
+    {
         return stopWatch.getWholeTime();
+    }
+
+    public int getNumberOfSteps()
+    {
+        return stepCounter.getSteps();
     }
 }
