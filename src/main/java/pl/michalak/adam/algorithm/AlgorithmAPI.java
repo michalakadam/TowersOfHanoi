@@ -1,5 +1,13 @@
 package pl.michalak.adam.algorithm;
 
+import pl.michalak.adam.Board.BoardAPI;
+
+/**
+ * This component is responsible for solving Towers of Hanoi problem recursively
+ * and measuring its efficiency.
+ * @author Adam_Michalak
+ */
+
 public class AlgorithmAPI {
     private final Recursion recursion;
     private final StopWatch stopWatch;

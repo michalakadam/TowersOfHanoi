@@ -7,7 +7,7 @@ class StepCounter{
         steps++;
     }
 
-    public int getSteps() {
+    int getSteps() {
         return steps;
     }
 }
