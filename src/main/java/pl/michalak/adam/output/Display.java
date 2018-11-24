@@ -6,12 +6,12 @@ package pl.michalak.adam.output;
  */
 public class Display {
 
-    public static void displayWithoutNextLine(String wiadomość) {
-            System.out.print(wiadomość);
+    public static void displayWithoutNextLine(String message) {
+            System.out.print(message);
         }
 
-    public static void displayWithNextLine(String wiadomość) {
-        System.out.print(wiadomość);
+    public static void displayWithNextLine(String message) {
+        System.out.print(message);
     }
 
 }
