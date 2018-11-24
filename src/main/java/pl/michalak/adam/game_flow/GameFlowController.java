@@ -14,8 +14,8 @@ class GameFlowController {
     {
         return (input.getAndValidateStringInput("Do you want to see steps needed to move the tower from one rod to the other? (Y/N) ", "Y", "N").equals("y"));
     }
-    void summary()
+    void summary(double timeOfRecursion)
     {
-        System.out.println("\nDONE!");
+        System.out.println("\nDONE! Whole calculation took "+timeOfRecursion+" seconds.");
     }
 }
