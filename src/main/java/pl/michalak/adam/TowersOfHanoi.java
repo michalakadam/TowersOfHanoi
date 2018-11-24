@@ -11,6 +11,7 @@ class TowersOfHanoi {
     final static char fromRod = 'A';
     final static char toRod = 'B';
     final static char tempRod = 'C';
+    static int numberOfSteps = 0;
 
     public static void main(String[] args)
     {
@@ -20,7 +21,7 @@ class TowersOfHanoi {
         long startTime = System.nanoTime();
         swapDisks(numberOfDisks, printSteps, fromRod, toRod, tempRod);
         long endTime = System.nanoTime();
-        System.out.println("\nDONE! Whole process took "+convertToSeconds(endTime-startTime)+" seconds.");
+        System.out.println("\nDONE! Whole process took "+numberOfSteps+" steps and "+convertToSeconds(endTime-startTime)+" seconds.");
     }
 
     private static void swapDisks(int numberOfDisks, boolean printSteps, char fromRod, char toRod, char tempRod)
@@ -29,9 +30,11 @@ class TowersOfHanoi {
             if(printSteps) {
                 System.out.printf("\nMove disk %d from rod %c to rod %c", numberOfDisks, fromRod, toRod);
             }
+            numberOfSteps++;
             return;
         }
         swapDisks(numberOfDisks-1, printSteps, fromRod, tempRod, toRod);
+        numberOfSteps++;
         if(printSteps) {
             System.out.printf("\nMove disk %d from rod %c to rod %c", numberOfDisks, fromRod, toRod);
         }
