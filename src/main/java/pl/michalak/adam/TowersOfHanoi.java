@@ -15,8 +15,12 @@ class TowersOfHanoi {
     public static void main(String[] args)
     {
         Scanner keyboard = new Scanner(System.in);
-        swapDisks(setNumberOfDisks(keyboard), decideIfStepsShouldBePrinted(keyboard), fromRod, toRod, tempRod);
-        System.out.println("\nDONE!");
+        int numberOfDisks = setNumberOfDisks(keyboard);
+        boolean printSteps = decideIfStepsShouldBePrinted(keyboard);
+        long startTime = System.nanoTime();
+        swapDisks(numberOfDisks, printSteps, fromRod, toRod, tempRod);
+        long endTime = System.nanoTime();
+        System.out.println("\nDONE! Whole process took "+convertToSeconds(endTime-startTime)+" seconds.");
     }
 
     private static void swapDisks(int numberOfDisks, boolean printSteps, char fromRod, char toRod, char tempRod)
@@ -43,5 +47,9 @@ class TowersOfHanoi {
         System.out.println("Do you want to see steps needed to move the tower from one rod to the other? (Y/N) ");
         String response = keyboard.next();
         return (response.equals("Y") || response.equals("y"));
+    }
+    private static double convertToSeconds(long totalTime)
+    {
+        return (double)totalTime*10E-9;
     }
 }
