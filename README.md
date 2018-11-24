@@ -18,5 +18,5 @@ This project was written to practice writing object-oriented code using S.O.L.I.
 ##### Run this project
 If your software fulfills requirements above do the following:  
 1. Download this repository to the folder on your computer
-2. Open this folder in terminal. Type command ~mvn install~
-3. Type the following command to run the application ~java -jar ./target/TowersOfHanoi.java.academy-2.0.jar~
+2. Open this folder in terminal. Type command *mvn install*
+3. Type the following command to run the application *java -jar ./target/TowersOfHanoi.java.academy-2.0.jar*
