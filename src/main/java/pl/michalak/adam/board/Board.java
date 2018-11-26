@@ -1,27 +1,22 @@
-package pl.michalak.adam.Board;
+package pl.michalak.adam.board;
 
 import pl.michalak.adam.output.Display;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * This component is responsible for disks and rods handling and printing.
- * @author Adam_Michalak
- */
-
-public class BoardAPI {
+public class Board {
     private final List<Rod> listOfRods;
+    int numberOfDisks;
 
-    public BoardAPI(int numberOfDisks){
+    Board(int numberOfDisks){
         listOfRods = new ArrayList<>();
         listOfRods.add(new Rod('A', numberOfDisks));
         listOfRods.add(new Rod('B', 0));
         listOfRods.add(new Rod('C', 0));
     }
 
-
-    public void moveDiskFromOneRodToTheOther(char fromRod, char toRod) {
+    void moveDisk(char fromRod, char toRod) {
         Rod fromThisRod = null;
         Rod toThisRod = null;
         for(int i = 0; i < listOfRods.size(); i++){

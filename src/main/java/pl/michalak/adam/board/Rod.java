@@ -1,4 +1,4 @@
-package pl.michalak.adam.Board;
+package pl.michalak.adam.board;
 
 import java.util.ArrayList;
 import java.util.List;

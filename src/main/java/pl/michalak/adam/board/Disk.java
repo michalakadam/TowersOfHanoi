@@ -1,4 +1,4 @@
-package pl.michalak.adam.Board;
+package pl.michalak.adam.board;
 
 class Disk {
     private final int number;
