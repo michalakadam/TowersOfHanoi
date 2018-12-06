@@ -3,7 +3,7 @@ package pl.michalak.adam.game_flow;
 import pl.michalak.adam.algorithm.AlgorithmAPI;
 
 /**
- * This component is responsible for controlling the flow of this app.
+ * Responsible for controlling the flow of this app.
  * @author Adam_Michalak
  */
 public class GameFlowAPI {

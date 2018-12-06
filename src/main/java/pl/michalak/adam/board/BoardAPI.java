@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This component is responsible for disks and rods handling and printing.
+ * Handles and prints disks and rods. 
  * @author Adam_Michalak
  */
 

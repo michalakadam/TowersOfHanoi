@@ -10,12 +10,14 @@ public class Board {
     int numberOfDisks;
 
     Board(int numberOfDisks){
+        // JDK9 has API for that, List.of
         listOfRods = new ArrayList<>();
         listOfRods.add(new Rod('A', numberOfDisks));
         listOfRods.add(new Rod('B', 0));
         listOfRods.add(new Rod('C', 0));
     }
 
+    //TODO: very wasteful, instead of mapping chars to Rods and getting the Rods each time, pass the Rods here! 
     void moveDisk(char fromRod, char toRod) {
         Rod fromThisRod = null;
         Rod toThisRod = null;
