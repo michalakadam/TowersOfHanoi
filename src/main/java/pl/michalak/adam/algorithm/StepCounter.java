@@ -1,13 +1,22 @@
 package pl.michalak.adam.algorithm;
+// import net.jcip.annotations;
+//TODO: import
+//@Immutable
+class StepCounter {
+    final static int steps;
 
-class StepCounter{
-    private static int steps = 0;
-
-    void addOneStep() {
-        steps++;
+    private StepCounter(int nextStep) {
+        steps = nextStep;
     }
 
-    int getSteps() {
-        return steps;
+    StepCounter increase() {
+        return new StepCounter(steps++);
+    }
+
+    /**
+     * Factory method - StepCounter always counts from 0.
+     **/
+    static StepCounter initialize() {
+        return new StepCounter(0);
     }
 }
